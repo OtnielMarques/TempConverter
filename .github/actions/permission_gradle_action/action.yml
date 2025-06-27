@@ -1,0 +1,11 @@
+name: "Set Permission Gradlew"
+description: "Action para setar permissao do gradlew"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set Gradle Permission
+      run: chmod +x ./gradlew
+      shell: bash
+      # The path to the gradlew file is relative to the root of the repository.
+      # If your gradlew file is in a different location, adjust the path accordingly.

@@ -3,16 +3,8 @@ on:
     push:
         branches:
             - main
-jobs:
-  
-    DigaOla:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v4
-            - name: Diga Ola
-              uses: ./.github/actions/diga-ola-action
-    Build:
+            
+             Build:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -25,6 +17,6 @@ jobs:
               uses: gradle/actions/setup-gradle@v4
 
             - name: Set Gradle Permission
-              uses: ./.github/actions/permission_gradle_action
+              run: chmod +x ./gradlew
 
             - run: ./gradlew build

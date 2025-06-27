@@ -3,7 +3,7 @@ description: "Action para printar ola no console"
 
 runs:
   using: "composite"
-  steps:
-  - name: Diga Ola
-    run: echo "Ola"
-    shell: bash
+    steps:
+    - name: Diga Ola
+      run: echo "Ola"
+      shell: bash
